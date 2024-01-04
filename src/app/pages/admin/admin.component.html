@@ -1,13 +1,61 @@
-<p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">
-    <ng-template pTemplate="header">
-        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
-    </ng-template>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-        quas!
-    </p>
-    <ng-template pTemplate="footer">
-        <p-button label="Save" icon="pi pi-check"></p-button>
-        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-    </ng-template>
-</p-card>
+<div class="card ml-4 inline-block w-auto">
+    <p-card header="Roles" subheader="Gestion de roles de usuario" class="w-auto h-auto">
+        <ng-template pTemplate="header" class="bg-blue-200 hover:bg-blue-300">
+            <img alt="Card" src="../../../assets/images/Intrusion-Prevention.svg" class="h-10rem"/>
+        </ng-template>
+        <ng-template pTemplate="footer" class="surface-500">
+            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true" (onClick)="gestRol('new')"></p-button>
+            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true" (onClick)="gestRol('update')"></p-button>
+            <p-button label="Eliminar" severity="danger"  [outlined]="true" (onClick)="gestRol('delete')"></p-button>
+        </ng-template>
+    </p-card>
+</div>
+
+<div class="card ml-4 mb-3 inline-block w-auto">
+    <p-card header="Equipamiento" subheader="Gestion de Equipamientos" class="w-auto h-auto">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="../../../assets/images/Omnichannel.svg" class="h-10rem"/>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Eliminar" severity="danger"  [outlined]="true"></p-button>
+        </ng-template>
+    </p-card>
+</div>
+<div class="card ml-4 inline-block w-auto">
+    <p-card header="Salas" subheader="Gestion de Salas" class="w-auto h-auto">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="../../../assets/images/Meeting.svg" class="h-10rem"/>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Eliminar" severity="danger"  [outlined]="true"></p-button>
+        </ng-template>
+    </p-card>
+</div>
+<div class="card ml-4 inline-block w-auto">
+    <p-card header="Usuarios" subheader="Gestion de usuarios" class="w-auto h-auto">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="../../../assets/images/Person-Leader.svg" class="h-10rem"/>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Eliminar" severity="danger"  [outlined]="true"></p-button>
+        </ng-template>
+    </p-card>
+</div>
+<div class="card ml-4 inline-block w-auto">
+    <p-card header="Reservas" subheader="Gestion de Reservas" class="w-auto h-auto">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="../../../assets/images/Agenda-Calendar.svg" class="h-10rem"/>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true"></p-button>
+            <p-button label="Eliminar" severity="danger"  [outlined]="true"></p-button>
+        </ng-template>
+    </p-card>
+</div>
