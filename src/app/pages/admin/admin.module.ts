@@ -13,12 +13,14 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { GestionRolComponent } from './gestion-rol/gestion-rol.component';
 import { AdminComponent } from './admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GestionEquipamientoComponent } from './gestion-equipamiento/gestion-equipamiento.component';
 
 
 @NgModule({
   declarations: [
     GestionRolComponent,
-    AdminComponent
+    AdminComponent,
+    GestionEquipamientoComponent
   ],
   imports: [
     CommonModule,

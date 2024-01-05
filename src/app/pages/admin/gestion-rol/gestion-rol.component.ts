@@ -34,7 +34,7 @@ export class GestionRolComponent implements OnInit{
     private messageService: MessageService,
     private router: Router
   ){
-    console.log("constructor de gestion-rol");
+    //console.log("constructor de gestion-rol");
     this.rolForm = this.formBuilder.group({
       idRol: [{
         value: 0,
@@ -45,9 +45,9 @@ export class GestionRolComponent implements OnInit{
     });
   }
   ngOnInit(): void {
-    console.log("On-Init de gestion-rol");
+    //console.log("On-Init de gestion-rol");
     this.activatedRoute.data.subscribe(datos =>{
-      console.log("Datos entrada ACCION: ", datos );
+      //console.log("Datos entrada ACCION: ", datos );
       this.accion = datos['accion'];
       this.name = datos['name'];
       this.titulo = datos['titulo'];
@@ -160,7 +160,7 @@ export class GestionRolComponent implements OnInit{
   rolSeleccionado(rol: RolResponce){
     console.log("Datos que recibo al seleccionar un rol: ", rol);
     this.cargarFormulario(rol);
-    this.disabled = false;
+    this.enableCampos();
     
   }
 
@@ -176,5 +176,11 @@ export class GestionRolComponent implements OnInit{
     this.disabled = true;
     this.rolForm.controls['descripcionRol'].disable();  
     this.rolForm.controls['nombreRol'].disable();
+  }
+
+  enableCampos(){
+    this.disabled = false;
+    this.rolForm.controls['descripcionRol'].enable();  
+    this.rolForm.controls['nombreRol'].enable();
   }
 }

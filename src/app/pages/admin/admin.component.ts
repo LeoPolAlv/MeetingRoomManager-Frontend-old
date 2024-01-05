@@ -14,7 +14,7 @@ export class AdminComponent {
   ){}
 
   gestRol(accion:string){
-    console.log("Accion: ", accion);
+    //console.log("Accion: ", accion);
 
     switch(accion){
       case 'new':{
@@ -30,6 +30,29 @@ export class AdminComponent {
       case 'delete':{
         //console.log("estamos en un caso de delete de rol desde admin page");
         this.router.navigateByUrl("admin/deleterol");
+        break;
+      }
+      default:{
+
+      } 
+    }
+  }
+
+  gestEqp(accion: string){
+    switch(accion){
+      case 'new':{
+        //console.log("estamos en un caso de alta de rol");
+        this.router.navigateByUrl("admin/altaeqp");
+        break;
+      }
+      case 'update':{
+        //console.log("estamos en un caso de update rol desde admin page");
+        this.router.navigateByUrl("admin/updteqp");
+        break;
+      }
+      case 'delete':{
+        //console.log("estamos en un caso de delete de rol desde admin page");
+        this.router.navigateByUrl("admin/deleqp");
         break;
       }
       default:{

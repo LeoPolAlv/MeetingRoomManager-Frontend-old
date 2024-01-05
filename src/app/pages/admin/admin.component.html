@@ -17,9 +17,9 @@
             <img alt="Card" src="../../../assets/images/Omnichannel.svg" class="h-10rem"/>
         </ng-template>
         <ng-template pTemplate="footer">
-            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true"></p-button>
-            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true"></p-button>
-            <p-button label="Eliminar" severity="danger"  [outlined]="true"></p-button>
+            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true" (onClick)="gestEqp('new')"></p-button>
+            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true" (onClick)="gestEqp('update')"></p-button>
+            <p-button label="Eliminar" severity="danger"  [outlined]="true" (onClick)="gestEqp('delete')"></p-button>
         </ng-template>
     </p-card>
 </div>
