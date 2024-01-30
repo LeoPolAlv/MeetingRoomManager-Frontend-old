@@ -1,0 +1,47 @@
+<div class="ml-7">
+    <h1>{{titulo}}</h1>
+</div>
+<div class="flex justify-content-end mb-3 pr-7">
+    <p-button icon="pi pi-arrow-left"  [outlined]="true" label="Menu Principal" severity="warning" (onClick)="volver()"></p-button>
+</div>
+<div class="flex align-items-center justify-content-center">
+    <div class="px-7">
+        <p-table [value]="usuarios" class="p-3" [tableStyle]="{'min-width': '60rem'}">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th class="bg-blue-800 text-white text-center">Email</th>
+                    <th class="bg-blue-800 text-white text-center">Activo</th>
+                    <th class="bg-blue-800 text-white text-center">Roles</th>
+                    <th class="bg-blue-800 text-white text-center">Cambio Estado</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-usuario>
+                <tr>
+                    <td class="text-center cursor-pointer text-blue-400"><!--</td> (click)="clickEmail(usuario)"-->
+                        <a [routerLink]="['/admin/updateuser',usuario.email]" routerLinkActive="router-link-active" >{{usuario.email}}</a>
+                    </td>
+                    <td class="text-center"><p-tag [value]="getEstado(usuario.estadoUser)" [severity]="getSeverity(usuario.estadoUser)"></p-tag></td>
+                    <td class="text-center">
+                        <p *ngFor="let rol of usuario.roles">
+                            {{rol.nombreRol}}
+                        </p>
+                    </td>
+                    <td class="text-center">
+                        <p-button  [label]="usuario.estadoUser? 'Desactivar': 'Activar'"
+                                [outlined]="true"
+                                [severity]="usuario.estadoUser? 'danger': 'success'"
+                                (click)="confirmo($event,usuario.email,usuario.estadoUser)">
+                        </p-button>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="summary">
+                <div class="flex p-3 bg-orange-500 text-white text-center">
+                    En total hay {{usuarios ? usuarios.length : 0 }} usuarios.
+                </div>
+            </ng-template>
+        </p-table>
+    </div>
+    <p-toast></p-toast>
+    <p-confirmDialog></p-confirmDialog>
+</div>

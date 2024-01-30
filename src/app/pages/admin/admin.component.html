@@ -1,4 +1,4 @@
-<div class="card ml-4 inline-block w-auto">
+<div class="card pl-4 mb-3 inline-block w-auto">
     <p-card header="Roles" subheader="Gestion de roles de usuario" class="w-auto h-auto">
         <ng-template pTemplate="header" class="bg-blue-200 hover:bg-blue-300">
             <img alt="Card" src="../../../assets/images/Intrusion-Prevention.svg" class="h-10rem"/>
@@ -11,7 +11,7 @@
     </p-card>
 </div>
 
-<div class="card ml-4 mb-3 inline-block w-auto">
+<div class="card pl-4 mb-3 inline-block w-auto">
     <p-card header="Equipamiento" subheader="Gestion de Equipamientos" class="w-auto h-auto">
         <ng-template pTemplate="header">
             <img alt="Card" src="../../../assets/images/Omnichannel.svg" class="h-10rem"/>
@@ -23,7 +23,7 @@
         </ng-template>
     </p-card>
 </div>
-<div class="card ml-4 inline-block w-auto">
+<div class="card pl-4 inline-block w-auto">
     <p-card header="Salas" subheader="Gestion de Salas" class="w-auto h-auto">
         <ng-template pTemplate="header">
             <img alt="Card" src="../../../assets/images/Meeting.svg" class="h-10rem"/>
@@ -35,19 +35,19 @@
         </ng-template>
     </p-card>
 </div>
-<div class="card ml-4 inline-block w-auto">
+<div class="card pl-4 inline-block w-auto">
     <p-card header="Usuarios" subheader="Gestion de usuarios" class="w-auto h-auto">
         <ng-template pTemplate="header">
             <img alt="Card" src="../../../assets/images/Person-Leader.svg" class="h-10rem"/>
         </ng-template>
         <ng-template pTemplate="footer">
-            <p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true"></p-button>
-            <p-button label="Actualizar" severity="warning" class="pr-2" [outlined]="true"></p-button>
-            <p-button label="Eliminar" severity="danger"  [outlined]="true"></p-button>
+            <!--p-button label="Nuevo" severity="success" class="pr-2" [outlined]="true" (onClick)="gestUser('new')"></p-button-->
+            <p-button label="Consulta" severity="primary" class="pr-2" [outlined]="true" (onClick)="gestUser('consusr')"></p-button>
+            <p-button label="Modificación" severity="success"  [outlined]="true" (onClick)="gestUser('delete')"></p-button>
         </ng-template>
     </p-card>
 </div>
-<div class="card ml-4 inline-block w-auto">
+<div class="card pl-4 inline-block w-auto">
     <p-card header="Reservas" subheader="Gestion de Reservas" class="w-auto h-auto">
         <ng-template pTemplate="header">
             <img alt="Card" src="../../../assets/images/Agenda-Calendar.svg" class="h-10rem"/>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -32,7 +32,8 @@ export class GestionRolComponent implements OnInit{
     private activatedRoute: ActivatedRoute,
     private rolService: RolService,
     private messageService: MessageService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ){
     //console.log("constructor de gestion-rol");
     this.rolForm = this.formBuilder.group({

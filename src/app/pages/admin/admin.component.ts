@@ -60,4 +60,23 @@ export class AdminComponent {
       } 
     }
   }
+
+  gestUser(accion:string){
+    switch(accion){
+      case 'consusr':{
+        console.log("Consultando Usuarios en el Sistema");
+        this.router.navigateByUrl("admin/consultauser");
+        break;
+      }
+      case 'delete': {
+        console.log("Dando baja logica a un usuario");
+        break;
+      }
+      case 'updtRol':{
+        console.log("Actualizando perisos de usuario");
+        break;
+      }
+    }
+
+  }
 }

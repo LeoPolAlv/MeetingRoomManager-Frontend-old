@@ -1,0 +1,59 @@
+<div class="ml-7">
+    <h1>{{titulo}}</h1>
+</div>
+<div class="grid">
+    <div class="mx-7 col">
+        <p-fieldset legend="Datos Usuario" >
+            <form [formGroup]="newUserForm" (ngSubmit)="onSubmit()">  
+                <div class="field grid">
+                    <label for="idUser" class="col-fixed" style="width:150px">Id Usuario</label>
+                    <div class="col">
+                        <input id="idUser" formControlName="idUser" type="text" pInputText 
+                        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary"/>
+                    </div>
+                </div>    
+                <div class="field grid pt-3">
+                    <label for="emailId" class="col-fixed" style="width:150px">E-Mail</label>
+                    <div class="col">
+                        <span class="p-float-label">
+                            <input pInputText id="email" formControlName="email" />
+                            <label for="email">E-mail</label>
+                        </span>
+                        <div *ngIf="newUserForm.get('email')?.errors && (newUserForm.get('email')?.pristine || newUserForm.get('email')?.dirty)">
+                            <p *ngIf="newUserForm.get('email')?.hasError('required')" class="text-red-500" >El campo E-mail es Requerido</p>
+                            <p *ngIf="newUserForm.get('email')?.hasError('email')" class="text-red-500" >E-mail NO es CORRECTO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field grid pt-3">
+                    <label for="passId" class="col-fixed" style="width:150px">Descripcion</label>
+                    <div class="col">
+                        <span class="p-float-label">
+                            <p-password id="passId" formControlName="passId" [feedback]="false" ></p-password>
+                            <label for="password">Password</label>
+                        </span>
+                        <!--p-password id="passId" formControlName="passId" [toggleMask]="true" ></p-password-->
+                        <div *ngIf="newUserForm.get('passId')?.errors && (newUserForm.get('passId')?.pristine || newUserForm.get('passId')?.dirty)">
+                            <p *ngIf="newUserForm.get('passId')?.hasError('required')" class="text-red-500" >El campo Password es Requerido</p>
+                            <p *ngIf="newUserForm.get('passId')?.hasError('pattern')" class="text-red-500" >La Contraseña debe tener al menos 8 caracteres: 1 minuscula, 1 Mayuscula, 1 numero, 1 caracter especial('#?!@$%^&*-')</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="p-3">
+                    <p-button [text]="true" [raised]="true" type="submit" [disabled]="newUserForm.invalid">{{nombre}}</p-button>
+                    <p-button label="Volver" [text]="true" [raised]="true" severity="secondary" class="pl-3" (onClick)="volver()"></p-button>
+                    <!--button class="button" type="submit" [disabled]="disabled">{{name}}</button-->
+                </div>
+            </form>
+            <p-messages></p-messages>
+        </p-fieldset>
+    </div>
+    
+    <!--div class="card flex ml-7 mb-5 col" >
+        <p-fieldset legend="Busqueda Equipos" [hidden]="hidden">
+            <p-listbox [options]="equipos" [(ngModel)]="selectedEquipo" optionLabel="option" (onChange)="equipoSeleccionado(selectedEquipo)" optionLabel="nombreEquipo" [filter]="true" [style]="{ width: '15rem' }" [listStyle]="{'max-height': '220px'}" [hidden]="hidden"></p-listbox>
+        </p-fieldset>
+    </div-->
+</div>
+    

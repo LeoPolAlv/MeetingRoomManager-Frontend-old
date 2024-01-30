@@ -14,6 +14,7 @@ import { GestionRolComponent } from './gestion-rol/gestion-rol.component';
 import { AdminComponent } from './admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GestionEquipamientoComponent } from './gestion-equipamiento/gestion-equipamiento.component';
+import { GestionUsuarioModule } from './gestion-usuario/gestion-usuario.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { GestionEquipamientoComponent } from './gestion-equipamiento/gestion-equ
     MessagesModule,
     BrowserAnimationsModule,
     ListboxModule,
-    FieldsetModule
+    FieldsetModule,
+    GestionUsuarioModule
   ]
 })
 export class AdminModule { }

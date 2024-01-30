@@ -1,0 +1,23 @@
+<div class="ml-7 pb-5">
+    <h3>Roles de </h3><h2>{{idUser}}</h2>
+</div>
+<div class="px-7">
+    <p-pickList [source]="rolesDisponibles" [target]="selectedRoles" sourceHeader="Disponibles" targetHeader="Asignados" [dragdrop]="true" [responsive]="true"
+        [sourceStyle]="{ height: '30rem' }" [targetStyle]="{ height: '30rem' }" breakpoint="1400px">
+        <ng-template let-rol pTemplate="item">
+            <div class="flex flex-wrap p-2 align-items-center gap-3">
+                <div class="flex-1 flex flex-column gap-2">
+                    <span class="font-bold">{{ rol.nombreRol }}</span>
+                    <div class="flex align-items-center gap-2">
+                        <i class="pi pi-tag text-sm"></i>
+                        <span>{{ rol.descripcionRol }}</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-pickList>
+    <div class="flex justify-content-center pb-2 pt-7 px-7">
+        <p-button icon="pi pi-arrow-left"  [outlined]="true" label="Usuarios" severity="warning" class="pr-4" (onClick)="volver()"></p-button>
+        <p-button icon="pi pi-check"  [outlined]="true" label="Confirmar Cambios" severity="success" (onClick)="confirmarCambos()"></p-button>
+    </div>
+</div>
