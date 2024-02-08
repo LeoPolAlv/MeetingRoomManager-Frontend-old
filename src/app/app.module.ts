@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { ConfirmationService } from 'primeng/api/confirmationservice';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { HttpClientModule, withInterceptors, withInterceptorsFromDi } from '@angular/common/http';
+import { ErrorHandlerInterceptor } from './core/interceptors/error-handler.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,6 +19,11 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     BrowserAnimationsModule,
   ],
   providers: [],
+  //providers: [provideHttpClient(withInterceptors([ErrorHandlerInterceptor]))],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+function provideHttpClient(): import("@angular/core").Provider | import("@angular/core").EnvironmentProviders {
+  throw new Error('Function not implemented.');
+}
+

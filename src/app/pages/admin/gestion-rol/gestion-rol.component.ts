@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { RolResponce } from 'src/app/interfaces/rol-responce';
-import { RolService } from 'src/app/services/rol.service';
+import { RolService } from 'src/app/core/services/rol.service';
 
 @Component({
   selector: 'app-gestion-rol',

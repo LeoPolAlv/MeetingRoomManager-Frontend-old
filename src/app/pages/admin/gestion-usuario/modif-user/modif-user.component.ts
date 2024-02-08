@@ -2,8 +2,8 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RolResponce } from 'src/app/interfaces/rol-responce';
 import { UserResponce } from 'src/app/interfaces/user-responce';
-import { RolService } from 'src/app/services/rol.service';
-import { UsuarioService } from 'src/app/services/usuario.service';
+import { RolService } from 'src/app/core/services/rol.service';
+import { UsuarioService } from 'src/app/core/services/usuario.service';
 
 @Component({
   selector: 'app-modif-user',

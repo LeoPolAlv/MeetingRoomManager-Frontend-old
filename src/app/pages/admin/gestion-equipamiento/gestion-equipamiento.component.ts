@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { EquipoResponce } from 'src/app/interfaces/equipo-responce';
-import { EquipamientoServiceService } from 'src/app/services/equipamiento-service.service';
+import { EquipamientoServiceService } from 'src/app/core/services/equipamiento-service.service';
 
 @Component({
   selector: 'app-gestion-equipamiento',

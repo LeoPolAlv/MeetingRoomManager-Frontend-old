@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { UserResponce } from '../interfaces/user-responce';
+import { UserResponce } from '../../interfaces/user-responce';
 
 const URL = environment.url;
 

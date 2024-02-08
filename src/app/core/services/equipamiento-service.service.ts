@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { EquipoResponce } from '../interfaces/equipo-responce';
-import { EquipoRequest } from '../interfaces/equipo-request';
+import { EquipoResponce } from '../../interfaces/equipo-responce';
+import { EquipoRequest } from '../../interfaces/equipo-request';
 
 const URL = environment.url;
 

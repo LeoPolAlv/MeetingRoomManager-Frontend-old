@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { RolRequest } from '../interfaces/rol-request';
-import { RolResponce } from '../interfaces/rol-responce';
+import { RolRequest } from '../../interfaces/rol-request';
+import { RolResponce } from '../../interfaces/rol-responce';
 
 const URL = environment.url;
 
